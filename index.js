@@ -67,7 +67,7 @@ app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {failureRedirect: '/'}), function(req, res){
 	res.status(200).end();
 })
-app.post('/api/create', gameController.addGame);
+// app.post('/api/create', gameController.addGame);
 app.get('/api/player', function(req, res) {
 	res.json(req.user)
 })
